@@ -11,21 +11,21 @@
 
 /* Orange theme */
 
-:root {
+/* :root {
   --accent: #f37e2c;
   --light: #FFEDE0;
   --light2: #FFAA6F;
   --dark: #e65c3d;
-}
+} */
 
 /* Blue theme */
 
-/* :root {
+:root {
   --accent: #1869ab;
   --light: #FFEDE0;
   --light2: #65A3E0;
   --dark: #255b87;
-} */
+}
 
 body {
   width: 100%;
