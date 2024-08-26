@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Popup Design</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="overlay active"></div>
+  <div class="modal active">
+    <div class="modal-header">
+      <h3>Order Checkout</h3>
+      <button class="close-btn" onclick="toggleModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form action="#">
+        <div class="form-group">
+          <p class="form-label">Enter Merchant ID:</p>
+          <input type="text" placeholder="Merchant ID" id="merchant-id" >
+        </div>
+        <div class="form-group">
+          <p class="form-label">Payment Frequency:</p>
+          <div class="radio-group">
+            <label class="radio-selector" for="payf-1">
+              <input type="radio" name="payf" id="payf-1" checked>
+              <div class="radio-details">
+                <p class="radio-heading">Single Payment</p>
+                <p class="radio-subheading">One-time payment</p>
+              </div>
+            </label>
+            <label class="radio-selector" for="payf-2">
+              <input type="radio" name="payf" id="payf-2">
+              <div class="radio-details">
+                <p class="radio-heading">Lease-to-own</p>
+                <p class="radio-subheading">12 Montly / Automatic Debit - 52 weekly</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <p class="form-label">Payment Method:</p>
+          <div class="radio-group">
+            <label class="radio-selector" for="paym-1">
+              <input type="radio" name="paym" id="paym-1" checked>
+              <div class="radio-details">
+                <p class="radio-heading">Manual</p>
+                <p class="radio-subheading">Online payments</p>
+              </div>
+            </label>
+            <label class="radio-selector" for="paym-2">
+              <input type="radio" name="paym" id="paym-2">
+              <div class="radio-details">
+                <p class="radio-heading">Automatic Debit</p>
+                <p class="radio-subheading">Subtracted from Merchant Receivables</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="form-group" style="flex-direction: row; gap: 20px;">
+          <p class="form-label">Cash Drawer:</p>
+          <div class="yesno-group">
+            <input type="radio" name="yesno" id="yes" checked>
+            <label for="yes">Yes</label>
+          </div>
+          <div class="yesno-group">
+            <input type="radio" name="yesno" id="no">
+            <label for="no">No</label>
+          </div>
+        </div>
+        <p class="note">*In order to become a Nextlayer Merchant with the ability to do Client Boosts and Registrations you must order a cash drawer to retain incoming funds. Boost-Enabled Merchants enjoy a 0.5% decreaase in transaction costs</p>
+        <button class="submit" type="submit">
+          Complete Payment
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Project -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    let modal = document.querySelector('.modal');
+    let overlay = document.querySelector('.overlay');
+    
+    function toggleModal() {
+      modal.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
